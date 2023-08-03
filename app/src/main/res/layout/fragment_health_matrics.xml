@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.HealthMatrics">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:text="Health Metrics"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                app:layout_constraintStart_toEndOf="@+id/imageView"
+                app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="17dp"
+                android:background="@drawable/share_design"
+                android:gravity="center"
+                android:text="Share"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.4"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.2" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scrollbars="none"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.9"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+            <TableLayout
+                android:id="@+id/table"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="10dp"
+                app:layout_constraintEnd_toEndOf="@id/scrollView2"
+                app:layout_constraintHeight_percent="0.7"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+                <TableRow android:background="@drawable/bordersround">
+
+                    <TextView
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:paddingHorizontal="40dip"
+                        android:paddingVertical="20dp"
+                        android:text="Health \n Parameters"
+                        android:textColor="@color/white"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:paddingHorizontal="31dip"
+                        android:paddingVertical="20dp"
+                        android:text="Standerd \n Meaurement"
+                        android:textColor="@color/white"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:background="@drawable/borders"
+                        android:paddingHorizontal="18dip"
+                        android:paddingVertical="22dp"
+                        android:text="Health Rate (pulse)"
+                        android:textColor="#304764"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:background="@drawable/borders"
+                        android:paddingHorizontal="18dip"
+                        android:paddingVertical="22dp"
+                        android:text="bpm"
+                        android:textColor="#304764"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:background="@drawable/borders"
+                        android:paddingHorizontal="18dip"
+                        android:paddingVertical="22dp"
+                        android:text="Blood Pressure"
+                        android:textColor="#304764"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:background="@drawable/borders"
+                        android:paddingHorizontal="18dip"
+                        android:paddingVertical="22dp"
+                        android:text="mmhg"
+                        android:textColor="#304764"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:background="@drawable/borders"
+                        android:paddingHorizontal="18dip"
+                        android:paddingVertical="22dp"
+                        android:text="Blood Sugar (Fasting)"
+                        android:textColor="#304764"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:background="@drawable/borders"
+                        android:paddingHorizontal="18dip"
+                        android:paddingVertical="22dp"
+                        android:text="mg dl"
+                        android:textColor="#304764"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:background="@drawable/borders"
+                        android:paddingHorizontal="18dip"
+                        android:paddingVertical="22dp"
+                        android:text="Body Mass Index (BMI)"
+                        android:textColor="#304764"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:background="@drawable/borders"
+                        android:paddingHorizontal="18dip"
+                        android:paddingVertical="22dp"
+                        android:text="18.5"
+                        android:textColor="#304764"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:background="@drawable/borders"
+                        android:paddingHorizontal="18dip"
+                        android:paddingVertical="22dp"
+                        android:text="Waist Circumference"
+                        android:textColor="#304764"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:background="@drawable/borders"
+                        android:paddingHorizontal="18dip"
+                        android:paddingVertical="22dp"
+                        android:text="inches"
+                        android:textColor="#304764"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:background="@drawable/borders"
+                        android:paddingHorizontal="18dip"
+                        android:paddingVertical="22dp"
+                        android:text="HDL (Good Cholesterol)"
+                        android:textColor="#304764"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:background="@drawable/borders"
+                        android:paddingHorizontal="18dip"
+                        android:paddingVertical="22dp"
+                        android:text="mg/dl"
+                        android:textColor="#304764"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:background="@drawable/borders"
+                        android:paddingHorizontal="18dip"
+                        android:paddingVertical="22dp"
+                        android:text="LDL (Bad Cholesterol)"
+                        android:textColor="#304764"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:background="@drawable/borders"
+                        android:paddingHorizontal="18dip"
+                        android:paddingVertical="22dp"
+                        android:text="mg/dl"
+                        android:textColor="#304764"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:background="@drawable/borders"
+                        android:paddingHorizontal="18dip"
+                        android:paddingVertical="22dp"
+                        android:text="Oxygen Supply"
+                        android:textColor="#304764"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:background="@drawable/borders"
+                        android:paddingHorizontal="18dip"
+                        android:paddingVertical="22dp"
+                        android:text="20% or more"
+                        android:textColor="#304764"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:background="@drawable/borders"
+                        android:paddingHorizontal="18dip"
+                        android:paddingVertical="22dp"
+                        android:text="Triglycerides (TG)"
+                        android:textColor="#304764"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:background="@drawable/borders"
+                        android:paddingHorizontal="18dip"
+                        android:paddingVertical="22dp"
+                        android:text="150 mg /dl"
+                        android:textColor="#304764"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:background="@drawable/borders"
+                        android:paddingHorizontal="18dip"
+                        android:paddingVertical="22dp"
+                        android:text="Respiration"
+                        android:textColor="#304764"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:background="@drawable/borders"
+                        android:paddingHorizontal="14dip"
+                        android:paddingVertical="22dp"
+                        android:text="per minute"
+                        android:textColor="#304764"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow android:layout_marginBottom="12dp">
+
+                    <TextView
+                        android:background="@drawable/borders"
+                        android:paddingHorizontal="18dip"
+                        android:paddingVertical="22dp"
+                        android:text="Fluid balance"
+                        android:textColor="#304764"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:background="@drawable/borders"
+                        android:paddingHorizontal="14dip"
+                        android:paddingVertical="22dp"
+                        android:text="per minute"
+                        android:textColor="#304764"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+                </TableRow>
+            </TableLayout>
+        </ScrollView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.12"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

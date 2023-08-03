@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/health"
+    app:startDestination="@id/mainActivity">
+
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.healthmatrics.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+    <fragment
+        android:id="@+id/healthMatrics"
+        android:name="com.example.healthmatrics.ui.HealthMatrics"
+        android:label="fragment_health_matrics"
+        tools:layout="@layout/fragment_health_matrics" >
+        <action
+            android:id="@+id/action_healthMatrics_to_mainActivity"
+            app:destination="@id/mainActivity" />
+    </fragment>
+</navigation>
