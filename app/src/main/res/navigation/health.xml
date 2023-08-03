@@ -19,4 +19,13 @@
             android:id="@+id/action_healthMatrics_to_mainActivity"
             app:destination="@id/mainActivity" />
     </fragment>
+    <fragment
+        android:id="@+id/editTargetRangeFragment"
+        android:name="com.example.healthmatrics.ui.EditTargetRangeFragment"
+        android:label="fragment_edit_target_range"
+        tools:layout="@layout/fragment_edit_target_range" >
+        <action
+            android:id="@+id/action_editTargetRangeFragment_to_mainActivity"
+            app:destination="@id/mainActivity" />
+    </fragment>
 </navigation>
