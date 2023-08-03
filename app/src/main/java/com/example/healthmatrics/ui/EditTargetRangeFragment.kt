@@ -27,6 +27,17 @@ class EditTargetRangeFragment : Fragment() {
         val view = binding?.root
         val buttonNavigate = (activity as? MainActivity)?.findViewById<Button>(R.id.button)
         buttonNavigate?.visibility = View.GONE
+        val switchLayout = binding?.switchlayout
+        val constraintLayout = binding?.fastingHideLayout
+        constraintLayout?.visibility = if (switchLayout?.isChecked == true) View.VISIBLE else View.GONE
+        switchLayout?.setOnCheckedChangeListener { _, isChecked ->
+            constraintLayout?.visibility = if (isChecked) View.VISIBLE else View.GONE
+        }
         return view
+    }
+    override fun onDestroyView() {
+        super.onDestroyView()
+        // Clear the binding to avoid potential memory leaks
+        binding = null
     }
 }
