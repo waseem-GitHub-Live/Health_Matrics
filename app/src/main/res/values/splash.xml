@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.AppCompat.starting" parent="Theme.AppCompat.Light">
+        <!--Set the splash screen background, animated icon, and animation duration.-->
+        <item name="windowSplashScreenBackground">@color/white</item>
+
+        <!-- Use windowSplashScreenAnimatedIcon to add either a drawable or an
+             animated drawable. One of these is required-->
+        <item name="windowSplashScreenAnimatedIcon">@drawable/graph_1</item>
+        <item name="windowSplashScreenAnimationDuration">300</item> <!--# Required for-->
+        <!--# animated icons-->
+        <!--Set the theme of the activity that directly follows your splash screen-->
+        <item name="postSplashScreenTheme">@style/Base.Theme.HealthMatrics</item>
+
+        <item name="android:windowSplashScreenBrandingImage">@drawable/graph_1</item>
+
+    </style>
+</resources>
